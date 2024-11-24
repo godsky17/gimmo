@@ -31,6 +31,7 @@
             @include('../shared/input', ['name' => "city", 'label' => "Ville", 'value' => $property->city, 'class' => "col-md-d"])
             @include('../shared/input', ['name' => "postal_code", 'label' => "Code postale", 'value' => $property->postal_code,'class' => "col-md-d"])
         </div>
+        @include("../shared/select", ['name' => "options", 'value' => $property->options, 'options' => $options])
         @if ($property->exists)
             <button class="btn btn-primary">Modifier</button>
         @else
