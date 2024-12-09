@@ -31,9 +31,10 @@
                 <a @class(['nav-link', 'active' => str_contains($route, 'option.')]) aria-current="page" href="{{ route('admin.option.index' )}}">Gestion des options</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-light" type="submit">Search</button>
+            <form method="POST" action="{{ route('logout') }}" class="d-flex" role="search">
+              @csrf
+              @method('delete')
+              <button class="btn btn-outline-light" type="submit">Deconnexion</button>
             </form>
           </div>
         </div>
