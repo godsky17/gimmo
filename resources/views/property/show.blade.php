@@ -15,7 +15,8 @@
 
         <div class="row mt-4">
             <h2>Interesse par ce bien</h2>
-            <form action="" class="vstack">
+            @include('../shared/flash')
+            <form action="{{ route('property.contact', $property) }}" method="POST" class="vstack">
                 @csrf
                 <div class="row" class="vstack gap-3">
                     @include('../shared/input', [
